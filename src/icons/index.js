@@ -13,6 +13,6 @@ export { default as Notifications } from "./Notifications.png";
 export { default as Profil } from "./Profil.png";
 export { default as TwiterIcon } from "./Twiter-Icon.png";
 export { default as Settings } from "./Settings.png";
-export { default as Points } from "./Points.png";
+export { default as More2 } from "./More-2.png";
 
 // console.log(Group);

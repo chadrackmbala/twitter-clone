@@ -1,28 +1,18 @@
 import React from "react"
 
-export default function Trend(props) {
-    console.log(props.trend.content);
+export default function Trend({ trend }) {
+    console.log(trend.content);
+    console.log(trend.icon);
+    const trendIcon = trend.icon;
     return (
         <>
-            {/* <div className="trend">
-                <div className="tweet-avatar">
-                    <img src={props.tweet.tweetAvatar} alt="" />
+            <div className="trend">
+                <div className="trend-origin">
+                    <p> {trend.origin} </p>
+                    <img src={trendIcon} alt="" className="img-ponts" />
                 </div>
-                <div className="tweet-content">
-                    <div className="tweet-body">
-                        <div className="tweet-title">
-                            <h3>{props.tweet.tweetTitle}</h3>
-                            <img src={props.tweet.tweetGroup} alt="" />
-
-                            <p>{props.tweet.tweetP}</p>
-                        </div>
-                        <p className="tweet-text">
-                        {props.tweet.tweetText}
-                        </p>
-                        <img src={props.tweet.tweetImage} className="tweet-image"  />
-                    </div>
-                </div>
-            </div> */}
+                <h3> {trend.content} </h3>
+            </div>
         </>
     )
 }

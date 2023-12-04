@@ -1,4 +1,4 @@
-import { Points } from '../icons/index';
+import { More2 } from '../icons/index';
 
 const trendsData = [
     {
@@ -6,7 +6,7 @@ const trendsData = [
         origin: "Trendign in Turqey",
         content: "#SQUID",
         tweets: "2,066 Tweets",
-        icon: Points,
+        icon: More2,
     },
 ];
 
