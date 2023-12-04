@@ -1,0 +1,4 @@
+export { default as newyorkTime } from "./newyorkTime.png";
+export { default as tweetProfilePhoto } from "./tweetProfilePhoto.png";
+export { default as tweetImage } from "./tweetImage.png";
+export { default as tweetLogo } from "./tweetLogo.png";
