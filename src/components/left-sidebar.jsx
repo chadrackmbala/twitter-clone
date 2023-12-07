@@ -46,12 +46,12 @@ export default function LeftSidebar() {
       <div>
         <div className="">
           <div className="follower-origin">
-            <Avatar />
+            <Avatar style={"left-sidebar-avatar"}/>
             <div>
               <div className="left-sidebar-avatar-text">
                 <div>
-                  <h3>Bradley Ortiz</h3>
-                  <p className="gray-text">@bradle_</p>
+                  <h4>Bradley Ortiz</h4>
+                  <p className="gray-text left-sidebar-avatar-name">@bradle_</p>
                 </div>
                 <img src={Padlock} alt="" />
                 <img src={More2} />

@@ -1,8 +1,6 @@
 import React from "react"
 
 export default function Trend({ trend }) {
-    console.log(trend.content);
-    console.log(trend.icon);
     const trendIcon = trend.icon;
     return (
         <>

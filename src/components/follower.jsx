@@ -2,8 +2,6 @@ import React from "react";
 import FollowButton from './follow-button';
 
 export default function Follower({ follower }) {
-    console.log(follower.content);
-    console.log(follower.icon);
     const avatar = follower.avatar;
     return (
         <>
@@ -12,7 +10,7 @@ export default function Follower({ follower }) {
                   <img src={avatar} alt="" className="follow-avatar" />
                   <div>
                     <div className="tweet-title">
-                        <h3>{follower.title}</h3>
+                        <p className="tweet-follow-text">{follower.title}</p>
                         <img src={follower.icon} alt="" />
                     </div>
                     <div>
