@@ -5,7 +5,7 @@ import WhoToFollow from "./who-to-follow";
 export default function RightSidebar() {
   return (
     <div className="right-sidebar">
-      <div className="">
+      <div className="input-search-container">
         <InputSearch style={"input-search"} placeholder={"Search Twitter"} />
       </div>
       <div className="trends-content">

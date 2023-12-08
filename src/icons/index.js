@@ -10,7 +10,7 @@ export { default as Lists } from "./Lists.png";
 export { default as Messages } from "./Messages.png";
 export { default as More } from "./More.png";
 export { default as Notifications } from "./Notifications.png";
-export { default as Profil } from "./Profil.png";
+export { default as Profile } from "./Profile.png";
 export { default as TwiterIcon } from "./Twiter-Icon.png";
 export { default as Settings } from "./Settings.png";
 export { default as More2 } from "./More-2.png";
