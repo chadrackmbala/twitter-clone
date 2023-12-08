@@ -1,9 +1,9 @@
-import TweetEditorActions from "./tweetEditorActions";
+import TweetEditorFormButton from "./tweetEditorFormButton"
 
 export default function More() {
     return (
         <>
-            <TweetEditorActions />
+            <TweetEditorFormButton />
         </>
     )
 }

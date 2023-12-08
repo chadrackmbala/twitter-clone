@@ -9,7 +9,6 @@ export default function DashboardNav() {
             <ul className='sidebar'>
                 <li className="sidebar-nav">
                     <img src={TwiterIcon} alt="" />
-                    <NavLink to="/">Home</NavLink>
                 </li>
                 <li className="sidebar-nav">
                     <img src={Home} alt="" />
