@@ -1,11 +1,15 @@
 import React from 'react';
+import DashboardNav from './dashboard-nav';
+import RightSidebar from './right-sidebar';
+import { Outlet } from 'react-router-dom';
 
-function Layout({ children }) {
+function Layout() {
     return (
         <>
-            <div className="left-sidebar" />
-            {children}
-            <div className="right-sidebar" />
+            <DashboardNav />
+            {/* <LeftSidebar /> */}
+            <Outlet />
+            <RightSidebar />
         </>
     );
 }

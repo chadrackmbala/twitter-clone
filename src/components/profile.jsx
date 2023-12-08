@@ -1,9 +1,9 @@
-import Avatar from "./avatar";
+import TweetEditorActions from "./tweetEditorActions";
 
-export default function Profile() {
+export default function More() {
     return (
         <>
-            <Avatar />
+            <TweetEditorActions />
         </>
     )
 }

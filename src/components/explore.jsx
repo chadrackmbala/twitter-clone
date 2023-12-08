@@ -1,9 +1,9 @@
-import Avatar from "./avatar";
+import TweetEditorActions from "./tweetEditorActions";
 
-export default function Explore() {
+export default function More() {
     return (
         <>
-            <Avatar />
+            <TweetEditorActions />
         </>
     )
 }
