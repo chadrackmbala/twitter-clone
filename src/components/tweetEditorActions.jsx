@@ -15,5 +15,5 @@ export default function TweetEditorActions() {
                 <img src={Schedule} alt="schedule-icon" />
             </div>
         </>
-    )
-}
+    );
+};

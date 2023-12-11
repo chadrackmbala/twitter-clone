@@ -1,4 +1,5 @@
 import React from "react"
+import { NavLink } from "react-router-dom";
 
 export default function Tweet(props) {
     console.log(props.tweet.tweetGroup);
@@ -6,7 +7,9 @@ export default function Tweet(props) {
         <>
             <div className="tweet">
                 <div className="tweet-avatar">
-                    <img src={props.tweet.tweetAvatar} alt="" />
+                    <NavLink to={`/${props.tweet.tweetTitle}`}>
+                        <img src={props.tweet.tweetAvatar} alt="" />
+                    </NavLink>
                 </div>
                 <div className="tweet-content">
                     <div className="tweet-body">
@@ -17,9 +20,9 @@ export default function Tweet(props) {
                             <p className="gray-text">{props.tweet.tweetP}</p>
                         </div>
                         <p className="tweet-text">
-                        {props.tweet.tweetText}
+                            {props.tweet.tweetText}
                         </p>
-                        <img src={props.tweet.tweetImage} className="tweet-image"  />
+                        <img src={props.tweet.tweetImage} className="tweet-image" />
                     </div>
                     {/* <TweetActions /> */}
                     <div className="tweet-actions">

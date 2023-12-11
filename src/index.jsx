@@ -11,6 +11,7 @@ import Bookmarks from './components/bookmarks';
 import Lists from './components/liste';
 import Profile from './components/profile';
 import More from './components/more';
+import UserProfile from './pages/user-profile';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/more",
         element: <More />,
+      },
+      {
+        path: ":tweetTitle",
+        element: <UserProfile />,
       },
     ]
   },

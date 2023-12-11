@@ -6,5 +6,5 @@ export default function More() {
             <h1>Profile</h1>
             <TweetEditorActions />
         </>
-    )
-}
+    );
+};

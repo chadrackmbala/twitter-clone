@@ -12,35 +12,35 @@ export default function DashboardNav() {
                 </li>
                 <li className="sidebar-nav">
                     <img src={Home} alt="" />
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink className="nav-link" to="/">Home</NavLink>
                 </li>
                 <li className="sidebar-nav">
                     <img src={Explore} alt="" />
-                    <NavLink to="/explore">Explore</NavLink>
+                    <NavLink className="nav-link" to="/explore">Explore</NavLink>
                 </li>
                 <li className="sidebar-nav">
                     <img src={Notifications} alt="" />
-                    <NavLink to="/notifications">Notifications</NavLink>
+                    <NavLink className="nav-link" to="/notifications">Notifications</NavLink>
                 </li>
                 <li className="sidebar-nav">
                     <img src={Messages} alt="" />
-                    <NavLink to="/messages">Messages</NavLink>
+                    <NavLink className="nav-link" to="/messages">Messages</NavLink>
                 </li>
                 <li className="sidebar-nav">
                     <img src={Bookmarks} alt="" />
-                    <NavLink to="/bookmarks">Bookmarks</NavLink>
+                    <NavLink className="nav-link" to="/bookmarks">Bookmarks</NavLink>
                 </li>
                 <li className="sidebar-nav">
                     <img src={Lists} alt="" />
-                    <NavLink to="/lists">Lists</NavLink>
+                    <NavLink className="nav-link" to="/lists">Lists</NavLink>
                 </li>
                 <li className="sidebar-nav">
                     <img src={Profile} alt="" />
-                    <NavLink to="/profile">Profile</NavLink>
+                    <NavLink className="nav-link" to="/profile">Profile</NavLink>
                 </li>
                 <li className="sidebar-nav">
                     <img src={More} alt="" />
-                    <NavLink to="/more">More</NavLink>
+                    <NavLink className="nav-link" to="/more">More</NavLink>
                 </li>
                 <TweetEditorFormButton style={"left-sidebar-button"} />
             </ul>
