@@ -13,21 +13,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.login-input {
-  height: 40px;
-  background-color: #202327;
-  /* margin-top: 10px; */
-  border-radius: 50px;
-  border: none;
-  margin: 10px;
-  padding: 0 0 0 20px;
-  color: #fff;
-}
-.login-btn {
-  padding: 10px 20px;
-  background-color: #1D9BF0;
-  border-radius: 25px
-}
+
 .timeline {
     flex: 0 0 800px;
     font-family: 'Inter', sans-serif;
@@ -227,9 +213,9 @@ body {
     cursor: pointer;
 }
 
-/*.tweet-action:hover {
+.tweet-action:hover {
     background-color: skyblue;
-}*/
+}
 .left-sidebar-container {
     display: flex;
     justify-content: center;
@@ -274,7 +260,7 @@ ul {
     background-color: #202327;
     /* margin-top: 10px; */
     border-radius: 50px;
-    width: 500px;
+    width: 370px;
     border: none;
     margin: 10px;
     padding: 0 0 0 20px;

@@ -2,16 +2,22 @@ import React from 'react';
 import DashboardNav from './dashboard-nav';
 import RightSidebar from './right-sidebar';
 import { Outlet } from 'react-router-dom';
+import TweetsContext from '../context/TweetsContext';
+import InitialData from "../data/initial-data.json";
 
-function Layout() {
+
+export default function Layout() {
+
+    const initialData = InitialData.tweets
+
     return (
         <>
-            <DashboardNav />
-            {/* <LeftSidebar /> */}
-            <Outlet />
-            <RightSidebar />
+            <TweetsContext.Provider value={{ initialData }}>
+                <DashboardNav />
+                {/* <LeftSidebar /> */}
+                <Outlet />
+                <RightSidebar />
+            </TweetsContext.Provider>
         </>
     );
-}
-
-export default Layout;
+};

@@ -2,8 +2,13 @@ import { NavLink } from "react-router-dom";
 import { Bookmarks, Explore, Lists, Messages, More, Profile, TwiterIcon, Notifications, Home, Padlock, More2 } from "../icons/index"
 import TweetEditorFormButton from './tweetEditorFormButton';
 import Avatar from "./avatar";
+import AvatarService from "../utils/avatar";
+import { useContext } from "react";
 
 export default function DashboardNav() {
+
+    const TweetAvatarContext = useContext(AvatarService.getAvatars());
+
     return (
         <div className="left-sidebar">
             <ul className='sidebar'>
@@ -47,7 +52,7 @@ export default function DashboardNav() {
             <div>
                 <div className="">
                     <div className="follower-origin">
-                        <Avatar style={"left-sidebar-avatar"} />
+                        <Avatar AvatarImage={TweetAvatarContext[0].userAvatar} style={"left-sidebar-avatar"} />
                         <div>
                             <div className="left-sidebar-avatar-text">
                                 <div>
@@ -63,4 +68,4 @@ export default function DashboardNav() {
             </div>
         </div>
     );
-}
+};

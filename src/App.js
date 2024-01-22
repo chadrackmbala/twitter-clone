@@ -1,14 +1,43 @@
+// import Layout from "./components/layout.jsx";
+// import TweetAvatarContext from "./context/TweetAvatarContext.js";
+// import TweetsData from "./utils/tweetsData.js"
 
-/*import Layout from "./components/layout.jsx";
+// import('./style/reset.css');
+// import('./style/App.css');
 
-import('./style/reset.css');
-import('./style/App.css');
+// export default function App() {
+//   return (
+//     <>
+//       <TweetsData.Provider>
+//         <TweetAvatarContext.Provider>
+//           <Layout />
+//         </TweetAvatarContext.Provider>
+//       </TweetsData.Provider>
+//     </>
+//   );
+// };
 
-export default function App() {
-  return (
-    <Layout />
-  );
-};*/
+// import { useState } from 'react';
+// import Login from './components/login.jsx';
+// import UserContext from "./context/UserContext.js";
+// import Layout from './components/layout.jsx';
+
+// export default function App() {
+//     const [pseudo, setPseudo] = useState(null);
+
+//     const handleLoginSubmit = (userName) => {
+//         setPseudo(userName);
+//     };
+
+//     return (
+//         pseudo ?
+//             <UserContext.Provider value={{ isLogged: true, pseudo: pseudo }}>
+//                 <Layout />
+//             </UserContext.Provider>
+//             :
+//             <Login onLoginSubmit={handleLoginSubmit} />
+//     );
+// };
 
 
 import React, { useState } from 'react';
@@ -25,15 +54,8 @@ import Lists from './components/liste';
 import Profile from './components/profile';
 import More from './components/more';
 import UserProfile from './pages/user-profile';
-import Login from './pages/login';
 
 export default function App() {
-
-  const [pseudo, setPsuedo] = useState(null);
-
-  const handleLoginSubmit = (userName) => {
-    setPsuedo(userName);
-  }
   
   return(
     <BrowserRouter>
@@ -53,5 +75,3 @@ export default function App() {
     </BrowserRouter>
   )
 }
-
-//<Route path="/" element ={<Login onLoginSubmit={handleLoginSubmit} />} />

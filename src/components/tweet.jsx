@@ -1,47 +1,33 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
+import Avatar from "./avatar";
+import CertifiedLogo from "./certified-logo";
+import TweetActions from "./tweetActions";
 
-export default function Tweet(props) {
-    console.log(props.tweet.tweetGroup);
+export default function Tweet({ tweet }) {
+
     return (
         <>
             <div className="tweet">
                 <div className="tweet-avatar">
-                    <NavLink to={`/${props.tweet.tweetTitle}`}>
-                        <img src={props.tweet.tweetAvatar} alt="" />
+                    <NavLink to={`/${tweet.tweetTitle}`}>
+                        <Avatar AvatarImage={tweet.tweetAvatar} />
                     </NavLink>
                 </div>
                 <div className="tweet-content">
                     <div className="tweet-body">
                         <div className="tweet-title">
-                            <h3>{props.tweet.tweetTitle}</h3>
-                            <img src={props.tweet.tweetGroup} alt="" />
+                            <h3>{tweet.tweetTitle}</h3>
+                            <CertifiedLogo />
 
-                            <p className="gray-text">{props.tweet.tweetP}</p>
+                            <p className="gray-text">{tweet.tweetP}</p>
                         </div>
                         <p className="tweet-text">
-                            {props.tweet.tweetText}
+                            {tweet.tweetText}
                         </p>
-                        <img src={props.tweet.tweetImage} className="tweet-image" />
+                        <img src={tweet.tweetImage} className="tweet-image" />
                     </div>
-                    {/* <TweetActions /> */}
-                    <div className="tweet-actions">
-                        <div className="tweet-action">
-                            <img src={props.tweet.tweetComment} alt="" />
-                            <p>{props.tweet.details.comments}</p>
-                        </div>
-                        <div className="tweet-action">
-                            <img src={props.tweet.tweetFlech} alt="" />
-                            <p>{props.tweet.details.fleche}</p>
-                        </div>
-                        <div className="tweet-action">
-                            <img src={props.tweet.tweetHeart} alt="" />
-                            <p>{props.tweet.details.likes}</p>
-                        </div>
-                        <div className="tweet-action">
-                            <img src={props.tweet.tweetShare} alt="" />
-                        </div>
-                    </div>
+                    <TweetActions details={tweet.details} />
                 </div>
             </div>
         </>

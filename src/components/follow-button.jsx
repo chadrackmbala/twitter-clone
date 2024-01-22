@@ -3,5 +3,5 @@ export default function FollowButton({style}) {
         <>
             <button className={style}>Follow</button>
         </>
-    )
-}
+    );
+};

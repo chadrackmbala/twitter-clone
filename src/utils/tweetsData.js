@@ -1,9 +1,10 @@
+import { createContext } from 'react';
 import {Group, Comments, FLeche, Heart, Share} from '../icons/index';
 import {newyorkTime, tweetImage, tweetProfilePhoto, tweetLogo} from '../images/index';
 
 class UserService {
     static getUsers () {
-        const tweetsData = [
+        const TweetsData = createContext([
             {
                 id: 1,
                 tweetAvatar: tweetProfilePhoto,
@@ -77,7 +78,7 @@ class UserService {
                 }
             },
             {
-                id: 5,
+                id: 4,
                 tweetAvatar: tweetLogo,
                 tweetTitle : "Twitter",
                 tweetGroup : Group,
@@ -94,9 +95,9 @@ class UserService {
                     // likes: 482,
                 }
             },
-        ];
-        return tweetsData;
-    }
-}
+        ]);
+        return TweetsData;
+    };
+};
 
 export default UserService;
