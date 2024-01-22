@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import('./style/reset.css');
+import('./style/App.css');
+/*import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/layout';
 import Home from "./pages/home";
 import Explore from './components/explore';
@@ -11,9 +13,9 @@ import Bookmarks from './components/bookmarks';
 import Lists from './components/liste';
 import Profile from './components/profile';
 import More from './components/more';
-import UserProfile from './pages/user-profile';
+import UserProfile from './pages/user-profile';*/
 
-const router = createBrowserRouter([
+/*const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
@@ -56,10 +58,16 @@ const router = createBrowserRouter([
       },
     ]
   },
-])
+])*/
+
+/*ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
+);*/
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>,
 );
