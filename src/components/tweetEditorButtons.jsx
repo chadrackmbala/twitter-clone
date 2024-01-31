@@ -6,7 +6,7 @@ export default function TweetEditorButtons({ tweetText, onButtonClick }) {
         <>
             <div className="tweet-editor-buttons">
                 <TweetEditorActions />
-                <TweetEditorFormButton tweetText={tweetText} onButtonClick={onButtonClick} style={"tweet-editor-button"}/>
+                <TweetEditorFormButton tweetText={tweetText} onButtonClick={onButtonClick} style={"tweet-editor-button"} />
             </div>
         </>
     );

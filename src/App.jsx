@@ -50,28 +50,45 @@ import Explore from './components/explore';
 import Notifications from './components/notifications';
 import Messages from './components/messages';
 import Bookmarks from './components/bookmarks';
-import Lists from './components/liste';              
+import Lists from './components/liste';
 import Profile from './components/profile';
 import More from './components/more';
 import UserProfile from './pages/user-profile';
+import DataProvider from './components/data-provider';
+import InitialData from "./data/initial-data.json";
+import UserContext from './context/UserContext';
 
 export default function App() {
-  
-  return(
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element ={<Home />} />
-          <Route path="/explore" element ={<Explore />} />
-          <Route path="/notifications" element ={<Notifications />} />
-          <Route path="/messages" element ={<Messages />} />
-          <Route path="/bookmarks" element ={<Bookmarks />} />
-          <Route path="/lists" element ={<Lists />} />
-          <Route path="/profile" element ={<Profile />} />
-          <Route path="/more" element ={<More />} />
-          <Route path=":tweetTitle" element ={<UserProfile />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+
+  const usersData = InitialData.currentUser;
+
+  let currentUser = usersData;
+
+  const [userData, setUserdata] = useState(currentUser);
+
+  return (
+    <UserContext.Provider value={{
+      isLogged: true,
+      name: userData.name,
+      userImageProfil: userData.userProfil
+    }}>
+      <DataProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/explore" element={<Explore />} />
+              <Route path="/notifications" element={<Notifications />} />
+              <Route path="/messages" element={<Messages />} />
+              <Route path="/bookmarks" element={<Bookmarks />} />
+              <Route path="/lists" element={<Lists />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/more" element={<More />} />
+              <Route path=":tweetTitle" element={<UserProfile />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </DataProvider>
+    </UserContext.Provider>
   )
 }

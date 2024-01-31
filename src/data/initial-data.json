@@ -1,8 +1,10 @@
 {
-    "current-user": {
-        "user": "Bradley Ortiz",
-        "isLogged": false
-    },
+    
+    "currentUser": {
+        "name": "Bradley Ortiz",
+        "isLogged": false,
+        "userImageProfil": "/images/profile-photo.png"
+      },
     "tweets":[
         {
             "id": 1,

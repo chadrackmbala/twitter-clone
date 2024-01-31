@@ -8,16 +8,12 @@ import InitialData from "../data/initial-data.json";
 
 export default function Layout() {
 
-    const initialData = InitialData.tweets
-
     return (
         <>
-            <TweetsContext.Provider value={{ initialData }}>
                 <DashboardNav />
                 {/* <LeftSidebar /> */}
                 <Outlet />
                 <RightSidebar />
-            </TweetsContext.Provider>
         </>
     );
 };

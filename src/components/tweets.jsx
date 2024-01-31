@@ -9,22 +9,12 @@ export default function Tweets() {
 
     const nweTweetContext = useContext(NweTweetContext);
 
-    console.log(nweTweetContext.text);
-
-    const { initialData } = useContext(TweetsContext)
-
-    console.log(initialData);
-
-    // const initialData = InitialData.tweets;
-    // console.log(initialData);
-
-    // const tweetsData = useContext(UserService.getUsers());
-    // console.log(tweetsData);
+    const { tweets } = useContext(TweetsContext)
 
     return (
         <>
             <div>
-                {initialData.map((tweet, index) => {
+                {tweets.map((tweet, index) => {
                     return <Tweet tweet={tweet} key={index} />
                 })}
             </div>
