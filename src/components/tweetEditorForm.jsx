@@ -9,7 +9,6 @@ import TweetEditorFormButton from "./tweetEditorFormButton";
 import createData from '../utils/createData';
 import UserContext from '../context/UserContext';
 
-
 export default function TweetEditorForm() {
 
     let currentUser = useContext(UserContext);
