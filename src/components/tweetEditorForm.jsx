@@ -42,7 +42,7 @@ export default function TweetEditorForm() {
                 likes: 0
             }
         }
-        // console.log("New Tweet :", newTweet);
+        console.log("New Tweet :", newTweet);
         setNewTweetData(newTweet)
         tweetSeter([newTweet, ...tweets]);
 
