@@ -17,6 +17,7 @@ export default function TweetEditorForm() {
 
     function handleTweetInputChange(text) {
         setInputText(text);
+        console.log("Bonjour");
     }
 
     const [newTweetData, setNewTweetData] = useState("");
