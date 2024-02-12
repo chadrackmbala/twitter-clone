@@ -19,7 +19,8 @@ export default function TweetEditorForm() {
       setInputText(text);
       console.log("Bonjour");
       console.log("Salut");
-      console.log("Mboté")
+      console.log("Mboté");
+      console.log("Djambo");
   }
 
     const [newTweetData, setNewTweetData] = useState("");
