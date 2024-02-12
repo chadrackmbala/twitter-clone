@@ -36,7 +36,9 @@ export default function TweetEditorForm() {
             
             const response = await axios.post('https://65b7cc9846324d531d558a48.mockapi.io/tweets', newTweet);
             console.log(response);
-            alert(`Vous venez d'enregistrer les informations suivantes : 
+            {
+                /*
+                alert(`Vous venez d'enregistrer les informations suivantes : 
                   Titre : ${newTweet.tweetTitle} ;
                   Pseudo : ${newTweet.tweetP} ;
                   Texte : ${newTweet.tweetText} ;
@@ -44,6 +46,8 @@ export default function TweetEditorForm() {
                   Retweets : ${newTweet.retweet}
                   Likes : ${newTweet.likes}`
             );
+                */
+            }
             reset();
           } catch (error) {
             console.error("Une erreur s'est produite:", error);

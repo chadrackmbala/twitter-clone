@@ -11,10 +11,12 @@ export default function Tweets() {
 
     const { tweets } = useContext(TweetsContext);
 
+    const tweetsArray = [...tweets].reverse();
+
     return (
         <>
             <div>
-                {tweets.map((tweet, index) => {
+                {tweetsArray.map((tweet, index) => {
                     return <Tweet tweet={tweet} key={index} />
                 })}
             </div>
