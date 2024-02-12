@@ -15,11 +15,11 @@ export default function TweetEditorForm() {
     const { tweets, tweetSeter } = useContext(TweetsContext);
     const [inputText, setInputText] = useState("");
 
-    function handleTweetInputChange(text) {
-        setInputText(text);
-        console.log("Bonjour");
-        console.log("Salut");
-    }
+  function handleTweetInputChange(text) {
+      setInputText(text);
+      console.log("Bonjour");
+      console.log("Salut");
+  }
 
     const [newTweetData, setNewTweetData] = useState("");
 
