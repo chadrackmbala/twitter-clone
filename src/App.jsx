@@ -62,7 +62,12 @@ export default function App() {
 
   const usersData = InitialData.currentUser;
 
+  //console.log("IMAGE :", usersData.userImageProfil);
+  //console.log("TYPE :", typeof usersData.userImageProfil);
+
   let currentUser = usersData;
+
+  //console.log(currentUser.userImageProfil);
 
   const [userData, setUserdata] = useState(currentUser);
 
@@ -70,7 +75,7 @@ export default function App() {
     <UserContext.Provider value={{
       isLogged: true,
       name: userData.name,
-      userImageProfil: userData.userProfil
+      userImageProfil: userData.userImageProfil
     }}>
       <DataProvider>
         <BrowserRouter>

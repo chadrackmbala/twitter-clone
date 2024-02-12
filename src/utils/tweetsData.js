@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import {Group, Comments, FLeche, Heart, Share} from '../icons/index';
+import {Group, Comments, Retweet, Heart, Share } from '../icons/index';
 import {newyorkTime, tweetImage, tweetProfilePhoto, tweetLogo} from '../images/index';
 
 class UserService {
@@ -14,7 +14,7 @@ class UserService {
                 tweetText : "President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a 'major breakthrough' that would serve to both strengthen the US steel industry and combat the global climate crisis.",
                 tweetImage : null,
                 tweetComment : Comments,
-                tweetFlech : FLeche,
+                tweetFlech : Retweet,
                 tweetHeart : Heart,
                 tweetShare : Share,
                 details: {
@@ -32,7 +32,7 @@ class UserService {
                 tweetText : "Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land",
                 tweetImage : tweetImage,
                 tweetComment : Comments,
-                tweetFlech : FLeche,
+                tweetFlech : Retweet,
                 tweetHeart : Heart,
                 tweetShare : Share,
                 details: {
@@ -50,7 +50,7 @@ class UserService {
                 tweetText : "BIG NEWS lol jk still Twitter",
                 // tweetImage : tweetImage,
                 tweetComment : Comments,
-                tweetFlech : FLeche,
+                tweetFlech : Retweet,
                 tweetHeart : Heart,
                 tweetShare : Share,
                 details: {
@@ -68,7 +68,7 @@ class UserService {
                 tweetText : "hello literally everyone",
                 // tweetImage : tweetImage,
                 tweetComment : Comments,
-                tweetFlech : FLeche,
+                tweetFlech : Retweet,
                 tweetHeart : Heart,
                 tweetShare : Share,
                 details: {
@@ -86,7 +86,7 @@ class UserService {
                 tweetText : "hello literally everyone",
                 // tweetImage : tweetImage,
                 tweetComment : Comments,
-                tweetFlech : FLeche,
+                tweetFlech : Retweet,
                 tweetHeart : Heart,
                 tweetShare : Share,
                 details: {

@@ -1,5 +1,5 @@
 export { default as Group } from "./Group.svg";
-export { default as FLeche } from "./Fleche.png";
+export { default as Retweet } from "./Fleche.png";
 export { default as Heart } from "./Heart.png";
 export { default as Share } from "./Share.png";
 export { default as Comments } from "./Comments.png";

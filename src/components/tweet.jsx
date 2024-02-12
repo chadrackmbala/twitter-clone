@@ -19,15 +19,16 @@ export default function Tweet({ tweet }) {
                         <div className="tweet-title">
                             <h3>{tweet.tweetTitle}</h3>
                             <CertifiedLogo />
-
                             <p className="gray-text">{tweet.tweetP}</p>
                         </div>
                         <p className="tweet-text">
                             {tweet.tweetText}
                         </p>
-                        <img src={tweet.tweetImage} className="tweet-image" />
+                        <div className="tweet-image">
+                            <img src={tweet.tweetImage} />
+                        </div>
                     </div>
-                    <TweetActions details={tweet.details} />
+                    <TweetActions details={tweet} />
                 </div>
             </div>
         </>

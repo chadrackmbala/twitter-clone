@@ -9,7 +9,7 @@ export default function Tweets() {
 
     const nweTweetContext = useContext(NweTweetContext);
 
-    const { tweets } = useContext(TweetsContext)
+    const { tweets } = useContext(TweetsContext);
 
     return (
         <>

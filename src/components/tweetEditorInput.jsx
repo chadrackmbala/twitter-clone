@@ -1,14 +1,24 @@
-export default function TweetEditorInput({ onInputChange }) {
+export default function TweetEditorInput({ registerInput }) {
     const valueText = "What’s happening?"
-
-    const handleInputChange = (e) => {
-        onInputChange(e.target.value);
-    }
 
     return (
         <>
-            <input type="text" className="tweet-editor-input" placeholder={valueText}
-                onChange={handleInputChange}
+            <input
+                type="text"
+                className="tweet-editor-input"
+                placeholder={valueText}
+                name="inputContent"
+                {...registerInput("inputContent", {
+                    required: "Veuillez écrire un message svp !",
+                    maxLength: {
+                        value: 180,
+                        message: "Votre message est trop long !"
+                    },
+                    pattern: {
+                        value: /\S/,
+                        message: "Votre message est trop long !"
+                    }
+                })}
             />
         </>
     );

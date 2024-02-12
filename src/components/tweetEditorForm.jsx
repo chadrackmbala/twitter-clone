@@ -1,55 +1,90 @@
 import TweetEditorInput from './tweetEditorInput';
-import TweetEditorButtons from './tweetEditorButtons';
-import { useState, useContext } from 'react';
-import NweTweetContext from '../context/NweTweetContext';
+import { useState, useContext, useRef } from 'react';
 import TweetsContext from '../context/TweetsContext';
 import TweetButton from './tweetButton';
 import TweetEditorActions from "./tweetEditorActions";
-import TweetEditorFormButton from "./tweetEditorFormButton";
-import createData from '../utils/createData';
 import UserContext from '../context/UserContext';
+import { newyorkTime, tweetProfilePhoto, tweetLogo, cnnAvatar, userProfil } from '../images/index';
+import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 export default function TweetEditorForm() {
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm();
+
+    const onSubmit = async (data) => {
+        console.log(data);
+
+        let newTweet;
+
+        newTweet = {
+            tweetAvatar: userProfil,
+            tweetTitle: currentUser.name,
+            tweetP: "@CNN . 7m",
+            tweetText: data.inputContent,
+            comments: 0,
+            retweet: 0,
+            likes: 0
+        }
+
+        try {
+            
+            const response = await axios.post('https://65b7cc9846324d531d558a48.mockapi.io/tweets', newTweet);
+            console.log(response);
+            alert(`Vous venez d'enregistrer les informations suivantes : 
+                  Titre : ${newTweet.tweetTitle} ;
+                  Pseudo : ${newTweet.tweetP} ;
+                  Texte : ${newTweet.tweetText} ;
+                  Commentaires : ${newTweet.comments} ;
+                  Retweets : ${newTweet.retweet}
+                  Likes : ${newTweet.likes}`
+            );
+            reset();
+          } catch (error) {
+            console.error("Une erreur s'est produite:", error);
+            alert("Une erreur s'est produite lors de l'envoi des données");
+          }
+
+          console.log(newTweet);
+    };
 
     let currentUser = useContext(UserContext);
     const { tweets, tweetSeter } = useContext(TweetsContext);
     const [inputText, setInputText] = useState("");
 
-  function handleTweetInputChange(text) {
-      setInputText(text);
-      console.log("Bonjour");
-      console.log("Salut");
-      console.log("Mboté");
-      console.log("Djambo");
-      console.log("OK");
-  }
+    //function handleTweetInputChange(text) {
+    //setInputText(text);
+    //}
+
+    const tweetInput = useRef(null);
 
     const [newTweetData, setNewTweetData] = useState("");
+
+    //const userId = tweets.length + 1;
 
     function handleButtonClick(e) {
         e.preventDefault();
 
-        let newTweet = {
-            id: 1,
-            tweetAvatar: currentUser.userProfil,
+        let newTweet
+
+        newTweet = {
+            tweetAvatar: userProfil,
             tweetTitle: currentUser.name,
-            tweetGroup: null,
             tweetP: "@CNN . 7m",
             tweetText: inputText,
-            tweetImage: null,
-            tweetComment: tweets.tweetComment,
-            tweetFlech: tweets.tweetFlech,
-            tweetHeart: tweets.tweetHeart,
-            tweetShare: tweets.tweetShare,
-            details: {
-                comments: 0,
-                fleche: 0,
-                likes: 0
-            }
+            comments: 0,
+            retweet: 0,
+            likes: 0
         }
-        console.log("New Tweet :", newTweet);
+        // console.log("New Tweet :", newTweet);
         setNewTweetData(newTweet)
         tweetSeter([newTweet, ...tweets]);
+        tweetInput.current.value = "";
 
         console.log("New Tweet :", newTweetData);
     }
@@ -57,14 +92,24 @@ export default function TweetEditorForm() {
     return (
         <>
             <div className="tweet-editor-form">
-                <form>
-                    <TweetEditorInput onInputChange={handleTweetInputChange} />
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <TweetEditorInput registerInput={register} />
+                    {errors.inputContent && (
+                        <span style={{ color: "red" }}>{errors.inputContent.message}</span>
+                    )}
                     <div className="tweet-editor-buttons">
                         <TweetEditorActions />
-                        <TweetButton onButtonClick={handleButtonClick} style={"tweet-editor-button"} />
+                        <TweetButton style={"tweet-editor-button"} />
                     </div>
                 </form>
+
             </div>
         </>
     );
 };
+
+
+
+{
+    //onInputChange={handleTweetInputChange}
+}
